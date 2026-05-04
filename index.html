@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mustafa Yalçın — Frontend Developer</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+<script>tailwind.config={theme:{extend:{fontFamily:{display:['Bebas Neue','sans-serif'],sans:['Outfit','sans-serif'],mono:['JetBrains Mono','monospace']}}}}</script>
+
+</head>
+<body>
+<div id="cd"><div id="cdi"></div></div>
+<div id="cr"></div>
+<div id="ld">
+  <div id="ldp">0</div>
+  <div id="ldb"><div id="ldf"></div></div>
+  <div id="ldt">mustafayalcin.dev yükleniyor...</div>
+</div>
+<div id="lb">
+  <div id="lb-header">
+    <div>
+      <div class="secl" id="lb-type"></div>
+      <h2 class="font-display text-3xl tracking-tight mt-1" id="lb-title"></h2>
+    </div>
+    <button id="lb-close" onclick="closeLb()">✕</button>
+  </div>
+  <div id="lb-body">
+    <div id="lb-imgs">
+      <img id="lb-main" src="" alt="" class="lb-main-img"/>
+      <div class="lb-thumbs" id="lb-thumbs"></div>
+    </div>
+    <div id="lb-info">
+      <div class="secl mb-4">Proje Detayı</div>
+      <p class="text-white/50 text-sm leading-relaxed mb-6" id="lb-desc"></p>
+      <div class="flex flex-wrap gap-2 mb-8" id="lb-tags"></div>
+      <div class="secl mb-3">Teknolojiler</div>
+      <div class="space-y-2" id="lb-tech"></div>
+      <a id="lb-link" href="#" target="_blank" class="mt-8 flex items-center justify-between p-4 rounded-xl border border-blue-500/20 hover:border-blue-500/40 transition-colors group">
+        <span class="text-sm font-semibold text-blue-400">Siteyi Ziyaret Et</span>
+        <span class="text-blue-400 group-hover:rotate-[-45deg] transition-transform inline-block">↗</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#"><img src="img/logo.png" alt="MY" style="height:60px;width:auto"/></a>
+  <div class="hidden md:flex items-center gap-10">
+    <a href="#hakkimda" class="text-sm text-white/80 hover:text-white transition-colors">Hakkımda</a>
+    <a href="#yetenekler" class="text-sm text-white/80 hover:text-white transition-colors">Yetenekler</a>
+    <a href="#deneyim" class="text-sm text-white/80 hover:text-white transition-colors">Deneyim</a>
+    <a href="#projeler" class="text-sm text-white/80 hover:text-white transition-colors">Projeler</a>
+    <a href="#iletisim" class="text-sm text-white/80 hover:text-white transition-colors">İletişim</a>
+  </div>
+  <div class="flex items-center gap-4">
+    <div class="sbadge hidden md:flex"><div class="sdot"></div><span class="font-mono text-xs text-white/80">Projeye açık</span></div>
+    <a href="https://drive.google.com/file/d/1sAWeXxKqNLJ-zYsx2BkLqOprDZWqo0Gm/view" target="_blank" class="text-sm font-semibold px-5 py-2.5 rounded-full border border-blue-500/40 text-blue-400 hover:bg-blue-500 hover:text-white hover:border-blue-500 transition-all duration-300">CV →</a>
+  </div>
+</nav>
+<section class="min-h-screen px-16 flex flex-col justify-between pt-32 pb-16 relative overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none" style="background-image:linear-gradient(rgba(59,130,246,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,0.03) 1px,transparent 1px);background-size:80px 80px"></div>
+  <div class="absolute top-1/3 right-1/4 w-[700px] h-[700px] rounded-full pointer-events-none" style="background:radial-gradient(circle,rgba(26,86,219,0.07),transparent 70%)"></div>
+
+  <div class="flex justify-between items-start opacity-0" style="animation:fadeUp .6s 2.4s forwards;animation-fill-mode:forwards">
+    <div class="flex items-center gap-2">
+      <div class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></div>
+      <span class="font-mono text-xs text-white/80 tracking-widest">Projeye açık · Gaziantep, TR</span>
+    </div>
+    <span class="font-mono text-xs text-white/80 hidden md:block">© 2026</span>
+  </div>
+
+  <div class="my-auto py-8">
+    <div class="secl mb-6 opacity-0" style="animation:fadeUp .6s 2.2s forwards;animation-fill-mode:forwards">// FRONTEND DEVELOPER </div>
+    <div class="hn opacity-0" style="animation:fadeUp .9s 2.3s cubic-bezier(.16,1,.3,1) forwards;animation-fill-mode:forwards">
+      <div>MUSTAFA</div>
+      <div class="flex items-baseline gap-4 flex-wrap">
+        <span class="hn-o">YALÇIN</span>
+        <span class="hn-g" style="font-size:clamp(60px,8vw,120px)">.</span>
+      </div>
+    </div>
+    <div class="flex items-end justify-between mt-10 flex-wrap gap-6 opacity-0" style="animation:fadeUp .6s 2.6s forwards;animation-fill-mode:forwards">
+      <p class="text-white/80 text-base max-w-sm leading-relaxed font-light">Performans odaklı, erişilebilir ve kullanıcı deneyimini ön planda tutan modern web arayüzleri geliştiriyorum.</p>
+      <div style="width:28px;height:46px;border:1.5px solid rgba(255,255,255,0.12);border-radius:14px;display:flex;justify-content:center;padding-top:7px"><div class="sw-dot"></div></div>
+      <a href="#projeler" class="flex items-center gap-3 px-8 py-4 rounded-full font-bold text-sm text-white transition-all hover:scale-105" style="background:linear-gradient(135deg,var(--bl),var(--bl2));box-shadow:0 0 40px rgba(26,86,219,0.35)">Projeleri Gör ↓</a>
+    </div>
+  </div>
+</section>
+<div class="mqw border-y py-4" style="border-color:rgba(255,255,255,0.05);background:#0a0f1a">
+  <div class="mq">
+    <span class="mqi"><span class="mqd"></span>HTML5</span><span class="mqi"><span class="mqd"></span>CSS3</span><span class="mqi"><span class="mqd"></span>JavaScript</span><span class="mqi"><span class="mqd"></span>TypeScript</span><span class="mqi"><span class="mqd"></span>React.js</span><span class="mqi"><span class="mqd"></span>Vue.js</span><span class="mqi"><span class="mqd"></span>Next.js</span><span class="mqi"><span class="mqd"></span>Tailwind CSS</span><span class="mqi"><span class="mqd"></span>Git</span><span class="mqi"><span class="mqd"></span>Figma</span><span class="mqi"><span class="mqd"></span>REST API</span><span class="mqi"><span class="mqd"></span>SEO</span><span class="mqi"><span class="mqd"></span>Pinia</span><span class="mqi"><span class="mqd"></span>Performance</span>
+    <span class="mqi"><span class="mqd"></span>HTML5</span><span class="mqi"><span class="mqd"></span>CSS3</span><span class="mqi"><span class="mqd"></span>JavaScript</span><span class="mqi"><span class="mqd"></span>TypeScript</span><span class="mqi"><span class="mqd"></span>React.js</span><span class="mqi"><span class="mqd"></span>Vue.js</span><span class="mqi"><span class="mqd"></span>Next.js</span><span class="mqi"><span class="mqd"></span>Tailwind CSS</span><span class="mqi"><span class="mqd"></span>Git</span><span class="mqi"><span class="mqd"></span>Figma</span><span class="mqi"><span class="mqd"></span>REST API</span><span class="mqi"><span class="mqd"></span>SEO</span><span class="mqi"><span class="mqd"></span>Pinia</span><span class="mqi"><span class="mqd"></span>Performance</span>
+  </div>
+</div>
+<section id="hakkimda" class="px-16 py-28">
+  <div class="max-w-[1300px] mx-auto">
+    <div class="flex items-center gap-4 mb-16 r"><div class="secl">01 — HAKKIMDA</div><div class="flex-1 h-px" style="background:rgba(255,255,255,0.05)"></div></div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+      <div class="rl">
+        <h2 class="font-display mb-8" style="font-size:clamp(52px,6vw,84px);line-height:.88;letter-spacing:-1px">KOD YAZAN<br><span style="background:linear-gradient(135deg,var(--bl2),var(--bl3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">BİR İNSAN.</span></h2>
+        <div class="space-y-5 mb-8" style="color:rgba(255,255,255,.4);font-size:15px;line-height:1.9;font-weight:300">
+          <p>Frontend geliştirme alanında 5 yıla yaklaşan deneyimimle, kullanıcılar için keyifli ve erişilebilir web arayüzleri geliştiriyorum. B2C ve B2B ticaret projelerinde kullanıcı dostu arayüzler geliştirdim.</p>
+          <p>Kişisel projelerimde <span style="color:#fff;font-weight:500">React.js</span>, <span style="color:#fff;font-weight:500">Vue.js</span> ve <span style="color:#fff;font-weight:500">TypeScript</span> kullanarak modern web teknolojilerini öğrenmeye ve uygulamaya devam ediyorum.</p>
+          <p>Vue tarafında state yönetimini daha sistematik yapabilmek için <span style="color:var(--bl3);font-weight:500">Pinia</span> ile çalışıyorum. Performans ve erişilebilirlik odaklı geliştirici olmayı hedefliyorum.</p>
+        </div>
+        <div class="flex gap-3 flex-wrap">
+          <a href="mailto:mustafayalcin277@gmail.com" class="px-5 py-2.5 rounded-full border text-sm font-medium hover:bg-white/5 transition-all" style="border-color:rgba(255,255,255,0.08)">✉ E-posta</a>
+          <a href="https://linkedin.com/in/mustafa-yalcin27/" target="_blank" class="px-5 py-2.5 rounded-full border text-sm font-medium hover:bg-white/5 transition-all" style="border-color:rgba(255,255,255,0.08)">↗ LinkedIn</a>
+          <a href="https://github.com" target="_blank" class="px-5 py-2.5 rounded-full border text-sm font-medium hover:bg-white/5 transition-all" style="border-color:rgba(255,255,255,0.08)">↗ GitHub</a>
+        </div>
+      </div>
+      <div class="rr grid grid-cols-2 gap-3">
+        <div class="rounded-2xl p-7 border hover:border-blue-500/20 transition-colors" style="background:var(--gr);border-color:rgba(255,255,255,0.05)">
+          <div class="font-display mb-2" style="font-size:60px;line-height:1;color:var(--bl2)">4+</div>
+          <div class="text-sm" style="color:rgba(255,255,255,.3)">Yıllık Deneyim</div>
+        </div>
+        <div class="rounded-2xl p-7 border hover:border-blue-500/20 transition-colors" style="background:var(--gr);border-color:rgba(255,255,255,0.05)">
+          <div class="font-display mb-2" style="font-size:60px;line-height:1;color:#fff">100+</div>
+          <div class="text-sm" style="color:rgba(255,255,255,.3)">Proje Tamamlandı</div>
+        </div>
+        <div class="col-span-2 rounded-2xl p-5 border flex items-center gap-4 hover:border-emerald-500/20 transition-colors" style="background:var(--gr);border-color:rgba(255,255,255,0.05)">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(34,197,94,0.08)">
+            <div class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></div>
+          </div>
+          <div class="flex-1">
+            <div class="text-sm font-semibold">Şu an aktif — Projeye açık</div>
+            <div class="font-mono text-xs mt-0.5" style="color:rgba(255,255,255,.22)">— Frontend Developer</div>
+          </div>
+          <div class="font-mono text-xs" style="color:rgba(255,255,255,.12);display: none">2023 →</div>
+        </div>
+        <div class="col-span-2 rounded-2xl p-5 border flex items-center justify-between" style="background:linear-gradient(135deg,rgba(26,86,219,0.12),rgba(59,130,246,0.06));border-color:rgba(59,130,246,0.2)">
+          <div>
+            <div class="font-semibold text-sm" style="color:var(--bl3)">Freelance projelere açığım</div>
+            <div class="text-xs mt-0.5" style="color:rgba(255,255,255,.25)">Remote · Part-time · Proje bazlı</div>
+          </div>
+          <div class="w-9 h-9 rounded-full flex items-center justify-center font-bold" style="background:rgba(59,130,246,0.15);color:var(--bl3)">↗</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="yetenekler" class="px-16 py-28" style="background:#0a0f1a">
+  <div class="max-w-[1300px] mx-auto">
+    <div class="flex items-center gap-4 mb-16 r"><div class="secl">02 — TEKNOLOJİ STACK</div><div class="flex-1 h-px" style="background:rgba(255,255,255,0.05)"></div></div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+      <div class="rl">
+        <h2 class="font-display mb-10" style="font-size:clamp(48px,5vw,72px);line-height:.88;letter-spacing:-1px">TEKNOLOJİ<br><span style="color:var(--bl2)">STACK</span></h2>
+        <div class="space-y-7">
+          <div><div class="flex justify-between mb-2"><span class="text-sm font-medium">HTML / CSS</span><span class="font-mono text-xs" style="color:rgba(255,255,255,.25)">97%</span></div><div class="sp"><div class="spf" style="width:97%;background:#60a5fa"></div></div></div>
+            <div><div class="flex justify-between mb-2"><span class="text-sm font-medium">Tailwind CSS</span><span class="font-mono text-xs" style="color:rgba(255,255,255,.25)">90%</span></div><div class="sp"><div class="spf" style="width:90%;background:#60a5fa"></div></div></div>
+          <div><div class="flex justify-between mb-2"><span class="text-sm font-medium">JavaScript</span><span class="font-mono text-xs" style="color:rgba(255,255,255,.25)">70%</span></div><div class="sp"><div class="spf" style="width:70%;background:#fbbf24"></div></div></div>
+          <div><div class="flex justify-between mb-2"><span class="text-sm font-medium">Vue.js</span><span class="font-mono text-xs" style="color:rgba(255,255,255,.25)">50%</span></div><div class="sp"><div class="spf" style="width:50%;background:#34d399"></div></div></div>
+          <div><div class="flex justify-between mb-2"><span class="text-sm font-medium">React.js</span><span class="font-mono text-xs" style="color:rgba(255,255,255,.25)">50%</span></div><div class="sp"><div class="spf" style="width:50%;background:#67e8f9"></div></div></div>
+          <div><div class="flex justify-between mb-2"><span class="text-sm font-medium">TypeScript</span><span class="font-mono text-xs" style="color:rgba(255,255,255,.25)">50%</span></div><div class="sp"><div class="spf" style="width:50%;background:#a78bfa"></div></div></div>
+        </div>
+      </div>
+      <div class="rr">
+        <h2 class="font-display mb-6" style="font-size:clamp(48px,5vw,72px);line-height:.88;letter-spacing:-1px">ARAÇLAR &<br><span style="color:var(--bl2)">KÜTÜPHANEler</span></h2>
+        <div class="flex flex-wrap gap-2 mb-8">
+          <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">React.js</span><span class="tag">Vue.js</span><span class="tag">Next.js</span><span class="tag">Tailwind CSS</span><span class="tag">Bootstrap</span><span class="tag">jQuery</span><span class="tag">Pinia</span><span class="tag">Redux</span><span class="tag">Vite</span><span class="tag">Webpack</span><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Figma</span><span class="tag">REST API</span><span class="tag">SEO</span><span class="tag">Lighthouse</span><span class="tag">Responsive</span>
+        </div>
+        <div class="space-y-2">
+          <div class="flex items-center gap-4 p-4 rounded-xl border hover:border-blue-500/20 transition-colors group" style="border-color:rgba(255,255,255,0.05)">
+            <div style="font-size:1.4rem;width:36px;text-align:center;flex-shrink:0">⚡</div>
+            <div><div class="text-sm font-semibold group-hover:text-blue-400 transition-colors">Modern Web Arayüzleri</div><div class="text-xs mt-0.5" style="color:rgba(255,255,255,.25)">HTML, CSS, Tailwind, React & Vue ile hızlı geliştirme</div></div>
+          </div>
+          <div class="flex items-center gap-4 p-4 rounded-xl border hover:border-blue-500/20 transition-colors group" style="border-color:rgba(255,255,255,0.05)">
+            <div style="font-size:1.4rem;width:36px;text-align:center;flex-shrink:0">🎨</div>
+            <div><div class="text-sm font-semibold group-hover:text-blue-400 transition-colors">UI/UX Uygulama</div><div class="text-xs mt-0.5" style="color:rgba(255,255,255,.25)">Figma'dan piksel uyumlu, estetik arayüzler</div></div>
+          </div>
+          <div class="flex items-center gap-4 p-4 rounded-xl border hover:border-blue-500/20 transition-colors group" style="border-color:rgba(255,255,255,0.05)">
+            <div style="font-size:1.4rem;width:36px;text-align:center;flex-shrink:0">🛒</div>
+            <div><div class="text-sm font-semibold group-hover:text-blue-400 transition-colors">E-Ticaret Çözümleri</div><div class="text-xs mt-0.5" style="color:rgba(255,255,255,.25)">Sepet, ürün listesi, giriş/kayıt sayfaları</div></div>
+          </div>
+          <div class="flex items-center gap-4 p-4 rounded-xl border hover:border-blue-500/20 transition-colors group" style="border-color:rgba(255,255,255,0.05)">
+            <div style="font-size:1.4rem;width:36px;text-align:center;flex-shrink:0">🚀</div>
+            <div><div class="text-sm font-semibold group-hover:text-blue-400 transition-colors">Performans & SEO</div><div class="text-xs mt-0.5" style="color:rgba(255,255,255,.25)">Lighthouse optimizasyonu ve erişilebilirlik</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="deneyim" class="px-16 py-28">
+  <div class="max-w-[1300px] mx-auto">
+    <div class="flex items-center gap-4 mb-16 r"><div class="secl">03 — DENEYİM</div><div class="flex-1 h-px" style="background:rgba(255,255,255,0.05)"></div></div>
+    <div>
+      <div class="exr r">
+        <div class="exd"></div>
+        <div class="font-mono text-xs pt-1" style="color:rgba(255,255,255,.8)">2020 → 2025</div>
+        <div class="pl-10">
+          <div class="flex items-start justify-between gap-4 flex-wrap mb-3">
+            <div>
+              <h3 class="font-display tracking-tight" style="font-size:32px;line-height:1">FRONTEND DEVELOPER</h3>
+              <div class="font-mono text-xs mt-1" style="color:rgba(255,255,255,.8)">PROJESOFT TEKNOLOJİ A.Ş. · Gaziantep / Teknopark</div>
+            </div>
+            <span class="tbl" style="font-family:'JetBrains Mono',monospace;font-size:10px;padding:4px 12px;border-radius:100px;border:1px solid rgba(59,130,246,0.3)">Aktif</span>
+          </div>
+          <p class="text-sm leading-relaxed max-w-2xl mb-5" style="color:rgba(255,255,255,.35)">B2C ve B2B ticaret platformlarında responsive ve kullanıcı odaklı arayüzler geliştirdim. Tailwind CSS ile modern, ölçeklenebilir ve genel arayüz tutarlılığını sağladım. Site performansını artırmaya yönelik optimizasyon çalışmaları yaptım. Müşteri geri bildirimlerini dikkate alarak arayüzlerde sürekli geliştirmeler yaptım. Backend ekibiyle birlikte projeleri başarıyla tamamladım.</p>
+          <div class="flex gap-2 flex-wrap"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Tailwind</span><span class="tag">JavaScript</span><span class="tag">Jquery</span><span class="tag">React Native</span></div>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</section>
+<section id="projeler" class="px-16 py-28" style="background:#0a0f1a">
+  <div class="max-w-[1300px] mx-auto">
+    <div class="flex items-center gap-4 mb-4 r"><div class="secl">04 — PROJELER</div><div class="flex-1 h-px" style="background:rgba(255,255,255,0.05)"></div></div>
+    <p class="font-mono text-xs mb-14 r" style="color:rgba(255,255,255,.75)">// Kartlara tıklayarak proje   görsellerini ve detaylarını inceleyin</p>
+<p class="font-mono text-xs mb-14 r" style="color:rgba(255,255,255,.75)">//E-Ticaret Platformu olarak burada paylaştığım projeler, önceki iş deneyimlerimde geliştirdiğim kurumsal farklı sektörlerden web arayüzlerinden seçilmiş örnek ekran görüntüleridir.</p>
+    <div class="grid grid-cols-12 gap-4">
+
+      <!-- Proje 1 - Büyük sol -->
+      <div class="col-span-12 md:col-span-4 pc r" style="height:360px" onclick="openLb(0)">
+        <div class="pc-ph" style="background:linear-gradient(135deg,#0f1a2e,#080c14)">
+              <div class="flex items-center gap-2 mb-3 px-3 py-1 rounded-full" style="background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.2)">
+            <div style="width:5px;height:5px;border-radius:50%;background:var(--bl2)"></div>
+            <span class="font-mono" style="font-size:10px;color:var(--bl3)">Şirket Projesi</span>
+          </div>
+          <div style="font-size:3.5rem">🛒</div>
+          <div class="font-mono text-xs mt-2" style="font-size:clamp(16px,4vw,16px);color:var(--bl3);letter-spacing:-1px;line-height:1">E-Ticaret Sitesi</div>
+          <div class="flex items-center gap-2 mt-2 px-3 py-1 rounded-full" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08)">
+            <span class="font-mono" style="font-size:10px;color:rgba(255,255,255,.25)">Html· Tailwind</span>
+          </div>
+        </div>
+        <div class="pc-ov">
+          <div style="width:100%">
+            <div class="flex flex-wrap gap-1.5 mb-2"><span class="tag">Tailwind</span><span class="tag">HTML/CSS</span></div>
+            <h3 style="font-weight:700;font-size:18px">E-Ticaret Sitesi</h3>
+            <p style="font-size:13px;color:rgba(255,255,255,.4);margin-top:4px">Tıkla, görselleri incele →</p>
+          </div>
+        </div>
+        <button class="pc-btn">Detayları Gör →</button>
+      </div>
+
+      <!-- Proje 2 - Küçük sağ -->
+      <div class="col-span-12 md:col-span-4 pc r" style="height:360px" onclick="openLb(1)">
+        <div class="pc-ph" style="background:linear-gradient(135deg,#0d1f0d,#080c14)">
+          <div style="font-size:3.5rem">📚</div>
+          <div class="font-mono text-xs mt-2" style="font-size:clamp(16px,4vw,16px);color:var(--bl3);letter-spacing:-1px;line-height:1">Kitaplık Sitesi</div>
+          <div class="flex items-center gap-2 mt-2 px-3 py-1 rounded-full" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08)">
+            <span class="font-mono" style="font-size:10px;color:rgba(255,255,255,.25)">React · Tailwind</span>
+          </div>
+        </div>
+        <div class="pc-ov">
+          <div style="width:100%">
+            <div class="flex flex-wrap gap-1.5 mb-2"><span class="tag">React</span><span class="tag">Tailwind</span></div>
+            <h3 style="font-weight:700;font-size:18px">Kişisel Kitaplık Sitesi</h3>
+            <p style="font-size:13px;color:rgba(255,255,255,.4);margin-top:4px">Tıkla, görselleri incele →</p>
+          </div>
+        </div>
+        <button class="pc-btn">Detayları Gör →</button>
+      </div>
+
+      <!-- Proje 3 - Küçük sol -->
+      <div class="col-span-12 md:col-span-4 pc r" style="height:360px" onclick="openLb(2)">
+        <div class="pc-ph" style="background:linear-gradient(135deg,#1a1200,#080c14)">
+          <div style="font-size:3.5rem">☁️</div>
+          <div class="font-mono text-xs mt-2" style="font-size:clamp(16px,4vw,16px);color:var(--bl3);letter-spacing:-1px;line-height:1">Hava Durumu Sitesi</div>
+          <div class="flex items-center gap-2 mt-2 px-3 py-1 rounded-full" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08)">
+            <span class="font-mono" style="font-size:10px;color:rgba(255,255,255,.25)">React · API</span>
+          </div>
+        </div>
+        <div class="pc-ov">
+          <div style="width:100%">
+            <div class="flex flex-wrap gap-1.5 mb-2"><span class="tag">React</span><span class="tag">Tailwind</span><span class="tag">API</span></div>
+            <h3 style="font-weight:700;font-size:18px">Hava Durumu Uygulaması</h3>
+          </div>
+        </div>
+        <button class="pc-btn">Detayları Gör →</button>
+      </div>
+
+      <!-- Proje 4 - Büyük sağ - Şirket -->
+      <div class="col-span-12 md:col-span-4 pc r" style="height:360px" onclick="openLb(3)">
+        <div class="pc-ph" style="background:linear-gradient(135deg,#0d1520,#080c14)">
+        
+          <div style="font-size:3.5rem">🏢</div>
+          <div class="font-mono text-xs mt-2"  style="font-size:clamp(16px,4vw,16px);color:var(--bl3);letter-spacing:-1px;line-height:1">E-Ticaret Sitesi</div>
+        </div>
+        <div class="pc-ov">
+          <div style="width:100%">
+            <div class="flex flex-wrap gap-1.5 mb-2"><span class="tag">Vue.js</span><span class="tag">Tailwind</span><span class="tag">Pinia</span></div>
+            <h3 style="font-weight:700;font-size:18px">E-Ticaret Sitesi</h3>
+          </div>
+        </div>
+        <button class="pc-btn">Detayları Gör →</button>
+      </div>
+           <div class="col-span-12 md:col-span-4 pc r" style="height:360px" onclick="openLb(4)">
+        <div class="pc-ph" style="background:linear-gradient(135deg,#0d1520,#080c14)">
+        
+          <div style="font-size:3.5rem">🏢</div>
+          <div class="font-mono text-xs mt-2"  style="font-size:clamp(16px,4vw,16px);color:var(--bl3);letter-spacing:-1px;line-height:1">Emlak Sitesi</div>
+        </div>
+        <div class="pc-ov">
+          <div style="width:100%">
+            <div class="flex flex-wrap gap-1.5 mb-2"><span class="tag">Vue.js</span><span class="tag">Tailwind</span><span class="tag">Pinia</span></div>
+            <h3 style="font-weight:700;font-size:18px">Emlak Sitesi</h3>
+          </div>
+        </div>
+        <button class="pc-btn">Detayları Gör →</button>
+      </div>
+           <div class="col-span-12 md:col-span-4 pc r" style="height:360px" onclick="openLb(5)">
+        <div class="pc-ph" style="background:linear-gradient(135deg,#0d1520,#080c14)">
+        
+          <div style="font-size:3.5rem">🏢</div>
+          <div class="font-mono text-xs mt-2"  style="font-size:clamp(16px,4vw,16px);color:var(--bl3);letter-spacing:-1px;line-height:1">Fitness Sitesi</div>
+        </div>
+        <div class="pc-ov">
+          <div style="width:100%">
+            <div class="flex flex-wrap gap-1.5 mb-2"><span class="tag">Vue.js</span><span class="tag">Tailwind</span></div>
+            <h3 style="font-weight:700;font-size:18px">Fitness Sitesi</h3>
+          </div>
+        </div>
+        <button class="pc-btn">Detayları Gör →</button>
+      </div>
+
+      <!-- Proje 5 - Full width -->
+      <div class="col-span-12 pc r" style="height:260px" onclick="openLb(6)">
+        <div class="pc-ph" style="background:linear-gradient(135deg,#0f1020,#080c14)">
+         
+          <div style="font-size:3rem">🎨</div>
+          <div class="font-display mt-2" style="font-size:clamp(28px,4vw,24px);color:var(--bl3);letter-spacing:-1px;line-height:1">ADMIN YÖNETİM SAYFASI</div>
+        </div>
+        <div class="pc-ov">
+          <div style="width:100%;display:flex;justify-content:space-between;align-items:flex-end">
+            <div>
+              <div class="flex flex-wrap gap-1.5 mb-2"><span class="tag">Vue.js</span><span class="tag">Tailwind</span><span class="tag">Chart.js</span></div>
+              <h3 style="font-weight:700;font-size:20px">Admin Yönetim Sayfası</h3>
+            </div>
+            <span style="font-size:2rem;color:rgba(255,255,255,.2)">↗</span>
+          </div>
+        </div>
+        <button class="pc-btn">Detayları Gör →</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section id="iletisim" class="px-16 py-28">
+  <div class="max-w-[1300px] mx-auto">
+    <div class="flex items-center gap-4 mb-16 r"><div class="secl">05 — İLETİŞİM</div><div class="flex-1 h-px" style="background:rgba(255,255,255,0.05)"></div></div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+      <div class="rl">
+        <h2 class="font-display mb-8" style="font-size:clamp(56px,7vw,96px);line-height:.88;letter-spacing:-2px">BİRLİKTE<br><span style="color:var(--bl2)">HARİKA</span><br>ŞEYLER<br>YAPALIM.</h2>
+        <p class="text-base leading-relaxed mb-10" style="color:rgba(255,255,255,.35)">Yeni fırsatlara ve freelance işlere açığım. Bana doğrudan ulaşabilirsiniz.</p>
+        <div>
+          <a href="mailto:mustafayalcin277@gmail.com" class="hr"><div><div class="secl mb-1">E-POSTA</div><div class="text-sm font-medium">mustafayalcin277@gmail.com</div></div><span class="ha">↗</span></a>
+          <a href="https://linkedin.com/in/mustafa-yalcin27/" target="_blank" class="hr"><div><div class="secl mb-1">LİNKEDİN</div><div class="text-sm font-medium">Profline Göz At</div></div><span class="ha">↗</span></a>
+          <a href="https://github.com" target="_blank" class="hr"><div><div class="secl mb-1">GİTHUB</div><div class="text-sm font-medium">Kod Örnekleri</div></div><span class="ha">↗</span></a>
+          <div class="hr" style="cursor:default"><div><div class="secl mb-1">KONUM</div><div class="text-sm font-medium">Gaziantep, Türkiye</div></div><span style="color:rgba(255,255,255,.2)">📍</span></div>
+        </div>
+      </div>
+      <div class="rr">
+        <div class="rounded-2xl p-8 border" style="background:var(--gr);border-color:rgba(255,255,255,0.05)">
+          <div class="secl mb-8">// MESAJ GÖNDER</div>
+          <div class="space-y-6">
+            <div><label class="secl block mb-2">AD SOYAD</label><input type="text" class="fi" placeholder="Ad Soyad"/></div>
+            <div><label class="secl block mb-2">E-POSTA</label><input type="email" class="fi" placeholder="mail@sirket.com"/></div>
+            <div><label class="secl block mb-2">PROJE BÜTÇESI</label>
+              <select class="fi" style="appearance:none;cursor:none">
+                <option style="background:#0e1520">₺5.000 — ₺15.000</option>
+                <option style="background:#0e1520">₺15.000 — ₺30.000</option>
+                <option style="background:#0e1520">₺30.000+</option>
+                <option style="background:#0e1520">Görüşelim</option>
+              </select>
+            </div>
+            <div><label class="secl block mb-2">MESAJ</label><textarea class="fi" rows="4" placeholder="Projeniz hakkında kısaca bilgi verin..."></textarea></div>
+          </div>
+          <button class="mt-8 w-full py-4 rounded-xl font-bold text-sm text-white transition-all hover:scale-[1.02]" style="background:linear-gradient(135deg,var(--bl),var(--bl2));box-shadow:0 0 30px rgba(26,86,219,0.3)">Mesaj Gönder ↗</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="border-t px-16 py-8 flex items-center justify-between flex-wrap gap-6" style="border-color:rgba(255,255,255,0.05)">
+  <img src="logo.png" alt="MY" style="height:30px;width:auto;opacity:.5"/>
+  <div class="flex gap-8">
+    <a href="https://linkedin.com/in/mustafa-yalcin27/" target="_blank" class="font-mono text-xs hover:text-white/60 transition-colors" style="color:rgba(255,255,255,.18)">LinkedIn</a>
+    <a href="https://github.com" target="_blank" class="font-mono text-xs hover:text-white/60 transition-colors" style="color:rgba(255,255,255,.18)">GitHub</a>
+    <a href="mailto:mustafayalcin277@gmail.com" class="font-mono text-xs hover:text-white/60 transition-colors" style="color:rgba(255,255,255,.18)">E-posta</a>
+  </div>
+  <div class="font-mono text-xs" style="color:rgba(255,255,255,.12)">© 2026 Mustafa Yalçın</div>
+</footer>
+
+<script src="js/main.js">
+
+</script>
+</body>
+</html>
